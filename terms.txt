@@ -1,0 +1,23 @@
+# Anchor terms for compound/collocation extraction.
+# Focal object (longarm + general gun vocabulary)
+gun
+guns
+rifle
+rifles
+shotgun
+shotguns
+firearm
+firearms
+# Handgun contrast
+pistol
+pistols
+revolver
+revolvers
+# Comparison objects (matched controls in the wider study)
+bicycle
+bicycles
+padlock
+padlocks
+dynamite
+automobile
+automobiles
