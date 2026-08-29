@@ -33,6 +33,14 @@ from pathlib import Path
 
 TOKEN_RE = re.compile(r"[a-z]+(?:[-'][a-z]+)*")
 
+# `htrc download` (and pairtree tooling generally) writes volume names in the
+# "clean" id form: ':' -> '+', '/' -> '=', '.' -> ','. Workset metadata uses
+# raw htids. Un-clean so outputs and the year lookup carry the raw htid.
+def unclean_htid(name: str) -> str:
+    if name.endswith(".zip"):
+        name = name[: -len(".zip")]
+    return name.replace("+", ":").replace("=", "/").replace(",", ".")
+
 
 def load_terms(path: Path) -> set:
     terms = set()
@@ -55,12 +63,12 @@ def iter_volume_pages(vol: Path):
     """Yield page texts from a volume directory or dataset zip."""
     if vol.is_dir():
         for p in sorted(vol.glob("**/*.txt")):
-            yield p.read_text(errors="replace")
+            yield p.read_text(encoding="utf-8", errors="replace")
     elif vol.suffix == ".zip":
         with zipfile.ZipFile(vol) as z:
             for name in sorted(z.namelist()):
                 if name.endswith(".txt"):
-                    yield io.TextIOWrapper(z.open(name),
+                    yield io.TextIOWrapper(z.open(name), encoding="utf-8",
                                            errors="replace").read()
 
 
@@ -92,7 +100,7 @@ def main() -> None:
     vol_rows = []
 
     for i, vol in enumerate(vols, 1):
-        htid = vol.name.removesuffix(".zip")
+        htid = unclean_htid(vol.name)
         n_pages = 0
         n_tokens = 0
         for page in iter_volume_pages(vol):
