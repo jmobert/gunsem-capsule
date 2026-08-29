@@ -21,3 +21,28 @@ padlocks
 dynamite
 automobile
 automobiles
+# Firearm brand anchors (full-text lane only — EF cannot disambiguate a
+# brand from a surname/place, so brands were excluded from the EF study;
+# here the extracted collocates ARE the disambiguation context). Singular
+# forms only ("colts" would pull the Baltimore Colts in this period's
+# sporting press). Known ambiguities, resolved downstream by collocate:
+# colt (horse), savage (adjective), browning (gerund/surname),
+# remington (typewriters — analytically useful overlap with the
+# typewriter control), winchester/ithaca/springfield (places),
+# stevens (surname), wesson (cooking oil).
+winchester
+remington
+colt
+savage
+browning
+stevens
+marlin
+ithaca
+springfield
+mossberg
+ruger
+luger
+mauser
+wesson
+# Padlock-control brand (vs. the university — same downstream logic)
+yale
