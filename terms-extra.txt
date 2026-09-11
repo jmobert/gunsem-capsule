@@ -1,0 +1,41 @@
+# Supplementary anchors (export request 3): the 31 terms the project's public-domain
+# run added to terms.txt, so the in-copyright tables carry the same comparison objects.
+# Liquor is the reason for the run; the rest keep the two sides identical.
+# Same rules as terms.txt: one lower-case token per line; '#' lines are ignored.
+# liquor
+whiskey
+whisky
+brandy
+rum
+liquor
+liquors
+# clock
+clock
+clocks
+timepiece
+timepieces
+# typewriter
+typewriter
+typewriters
+type-writer
+type-writers
+# ammunition
+cartridge
+cartridges
+gunpowder
+# edged weapons
+dirk
+dirks
+slungshot
+slung-shot
+# variants of the comparison objects already in terms.txt
+motorcar
+motorcars
+tricycle
+tricycles
+vault
+vaults
+strongbox
+nitroglycerin
+nitro-glycerine
+nitroglycerine
