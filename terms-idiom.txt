@@ -1,0 +1,13 @@
+# Request 4 (idiom anchors): gun-rights idiom terms, counted over the SAME 816 volumes as
+# requests 1-3. `bear arms` / `keep and bear arms` show up as the left neighbours of `arms`;
+# `second amendment` as the left neighbour of `amendment`. `bear` itself is left out: in
+# this corpus it is overwhelmingly the animal. One lower-case token per line.
+arms
+amendment
+militia
+defense
+defence
+self-defense
+self-defence
+law-abiding
+constitutional

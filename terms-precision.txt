@@ -1,0 +1,119 @@
+# Request 4 (precision sample): every term the EF object measure matched on a
+# qualifying page, per object (corpus/object_pages terms_matched). One lower-case
+# token per line; '#' lines are ignored.
+# ammunition
+birdshot
+buckshot
+cartridge
+cartridges
+gunpowder
+percussion
+powder
+primer
+primers
+shells
+# automobile
+automobile
+automobiles
+chauffeur
+garage
+horseless
+motorcar
+motorcars
+motoring
+motorist
+motorists
+# bicycle
+bicycle
+bicycles
+cycling
+cyclist
+cyclists
+tricycle
+tricycles
+velocipede
+velocipedes
+wheelman
+wheelmen
+# clock
+chronometer
+chronometers
+clock
+clockmaker
+clocks
+horology
+timepiece
+timepieces
+# dynamite
+dynamite
+giant-powder
+nitro-glycerine
+nitroglycerin
+nitroglycerine
+stumping
+subsoiling
+# edged_weapon
+dirk
+dirks
+knuckle-duster
+poniard
+slung-shot
+slungshot
+stiletto
+# handgun
+deringer
+derringer
+pistol
+pistols
+revolver
+revolvers
+six-shooter
+sixshooter
+# liquor
+ale
+brandy
+distillery
+gin
+lager
+liquor
+liquors
+rum
+saloon
+saloons
+temperance
+whiskey
+whisky
+# longarm
+breech-loader
+breechloader
+carbine
+carbines
+firearm
+firearms
+gun
+guns
+musket
+muskets
+repeater
+repeaters
+rifle
+rifles
+shotgun
+shotguns
+# security_hardware
+burglar-proof
+nightlatch
+padlock
+padlocks
+strongbox
+vault
+vaults
+# typewriter
+stenographer
+type-writer
+type-writers
+typewriter
+typewriters
+typewriting
+typist
+typists
