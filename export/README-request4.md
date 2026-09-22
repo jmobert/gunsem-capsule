@@ -30,7 +30,7 @@ Aggregate COUNT tables. Tokens are lower-cased alphabetic word tokens.
 | precision-trigrams.csv | w1, w2, w3, htid, year, count | anchor term with both adjacent tokens x sampled page | {ROWS_PRECISION_TRIGRAMS} |
 | precision-volumes.csv | htid, year, n_pages, n_tokens | sampled page (n_pages is always 1) | {ROWS_PRECISION_VOLUMES} |
 | precision-forms.csv | anchor, form, htid, year, count | hyphenated or possessive single token containing an anchor (e.g. gun-boat) x sampled page | {ROWS_PRECISION_FORMS} |
-| precision-pages.csv | htid, seq, object, decade, status, mapping, n_files, ef_page_count, term_token, term_component | sampled page: processing report, no text | {ROWS_PRECISION_PAGES} |
+| precision-pages.csv | htid, seq, object, decade, status, mapping, n_files, ef_page_count, term_token, term_component | sampled page: processing report (how the page was located, whether its term is on it), no text | {ROWS_PRECISION_PAGES} |
 | idiom-bigrams.csv | anchor, direction (pre/post), other, htid, year, count | anchor term x adjacent token x volume | {ROWS_IDIOM_BIGRAMS} |
 | idiom-trigrams.csv | w1, w2, w3, htid, year, count | anchor term with both adjacent tokens x volume | {ROWS_IDIOM_TRIGRAMS} |
 | idiom-volumes.csv | htid, year, n_pages, n_tokens | volume (denominators only) | {ROWS_IDIOM_VOLUMES} |
@@ -41,9 +41,11 @@ the eleven objects' terms: 11 objects x 17 decades (1820–1980) x 100 pages, on
 volume and each volume used once. The full list, with page numbers, is public in the
 repository (workset/precision_sample.csv). Public-domain volumes are included alongside
 in-copyright ones, so the same measure runs across the whole period; the public-domain
-pages can also be checked against their open text. {N_OK} of the {N_SAMPLE} pages were
-processed; the others (volume not available, or page not matched) are listed in
-precision-pages.csv.
+pages can also be checked against their open text. Each sampled page was retrieved on
+its own from the Data API (`htrc download -pg`), or taken from the volume where a first
+run had already downloaded it whole; the page's presence was checked in either case
+(select_pages.py). {N_OK} of the {N_SAMPLE} pages were processed; the others (volume not
+available, or page not matched) are listed in precision-pages.csv.
 
 ## Non-consumptive character
 Each sampled volume contributes exactly one page, so each precision row records the
