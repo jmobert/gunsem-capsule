@@ -9,9 +9,8 @@
 # If it ends in READY, stage and submit:
 #   bash release-extra.sh
 #   releaseresults done
-# The VNC keyboard drops Shift on punctuation, so none of those lines needs more than
-# letters, dots, hyphens and slashes. Everything written goes to the secure volume,
-# the only place that survives secure mode.
+# Type underscores by hand; do not rely on Tab completion for names that contain them.
+# Everything written goes to the secure volume, the only place that survives secure mode.
 set -u
 export PATH=$HOME/.local/bin:$PATH
 KIT=${KIT:-$(cd "$(dirname "$0")" && pwd)}
