@@ -2,7 +2,7 @@
 
 Requester: Jonathan Obert, Amherst College.
 Capsule: 03eb86bb-518c-4dcc-af1a-5f24880904a4.
-Analysis code (public): https://github.com/jmobert/gunsem-capsule, commit d670356.
+Analysis code (public): https://github.com/jmobert/gunsem-capsule, commit 3ee744e.
 extract_compounds.py is unchanged from commit e4c6e12, which produced requests 1–3. This
 request adds a page sample (workset/precision_sample.csv), two term lists
 (terms-precision.txt, terms-idiom.txt), select_pages.py, count_forms.py and the driver
